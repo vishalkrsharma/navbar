@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.nav {
+  background-color: #333;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.nav__brand {
+  font-size: 4rem;
+  margin: 10px 0 10px 20px;
+}
+
+.nav__btn {
+  position: absolute;
+  right: 20px;
+  display: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #444;
+}
+
+.nav__btn__bars {
+  height: 4px;
+  width: 30px;
+  background-color: #fff;
+  margin: 2px auto;
+  border-radius: 10px;
+}
+
+.nav__links {
+  margin: 10px 20px 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  background-color: #333;
+}
+
+.nav__links__item {
+  font-size: 2rem;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.nav__links__item:hover, .nav__links__item:active {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  .nav__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 17.5px;
+  }
+  .nav__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+    width: 96vw;
+    position: absolute;
+    top: 70px;
+    margin: 2vw;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .nav__links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__links__item {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+}
