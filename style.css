@@ -7,6 +7,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav {
@@ -63,6 +64,19 @@ html {
   display: flex;
   gap: 10px;
   background-color: #333;
+  position: relative;
+}
+
+.nav__links__arrow {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: -5px;
+  right: 15px;
+  display: none;
 }
 
 .nav__links__item {
@@ -98,17 +112,22 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     display: none;
-    width: 96vw;
+    width: 93vw;
     position: absolute;
     top: 70px;
-    margin: 2vw;
+    margin: 3.5vw;
+    margin-top: 15px;
     padding: 10px;
     border-radius: 10px;
+    z-index: 10;
   }
   .nav__links.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .nav__links__arrow {
+    display: block;
   }
   .nav__links__item {
     width: 100%;
